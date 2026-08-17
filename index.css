@@ -40,3 +40,44 @@ input{
     font-size:25px;
     padding:10px;
 }
+.stats-dashboard{
+display: flex; 
+justify-content: space-around; 
+margin: 15px auto; 
+max-width: 300px; 
+background: rgba(255,255,255,0.1); 
+padding: 10px;
+ border-radius: 8px;
+  font-family: sans-serif; 
+  font-size: 14px;
+}
+#best-score{
+    display: flex; 
+    justify-content: space-around; 
+    margin: 15px auto; 
+    max-width: 300px; 
+    background: rgba(255,255,255,0.1); 
+    padding: 10px; 
+    border-radius: 8px; 
+    font-family: sans-serif; 
+    font-size: 14px;
+}
+#total-wins{
+    font-weight: bold; 
+    color: #38bdf8;
+}
+.difficulty-zone{
+    margin: 15px auto; 
+    max-width: 300px; 
+    text-align: center;
+
+}
+label{
+    font-family: sans-serif; 
+    font-size: 14px;
+     margin-right: 5px;
+}
+#difficulty-select{
+    padding: 5px; 
+    border-radius: 4px;
+}

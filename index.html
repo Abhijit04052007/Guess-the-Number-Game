@@ -7,17 +7,32 @@
      <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="first-para"> 
+    <div class="difficulty-zone">
+        <label for="difficulty-select">Arena Tier:</label>
+        <select id="difficulty-select" onchange="restart()">
+            <option value="easy">Easy (15 Tries)</option>
+            <option value="medium" selected>Medium (10 Tries)</option>
+            <option value="hard">Hard (7 Tries)</option>
+        </select>
+        <button id="start-btn" class="btn" onclick="lockAndStart()" >START GAME</button> 
+          <p id="game-instructions">Choose a difficulty above and click "START MATCH" to begin!</p>
+        <p>You cannot change the difficulty once the match starts.</p>
     <p>Try and guess a random number between 1 and 100</p>
     <p>You have 10 attempts to guess the right number</p>
     </div>
+    <div class="stats-dashboard">
+        <div>Best Run: <span id="best-score">--</span></div>
+        <div>Total Wins: <span id="total-wins">0</span></div>
+    </div>
     <h1>GUESS A NUMBER</h1>
-    <input id="input-el" type="text">
+    <input id="input-el" type="number" disabled placeholder="Click START GAME first">
+     <div id="message-el"></div>
+
     <div class="submit-btn"> 
-    <button class="btn" onclick="submit()">SUBMIT GUESS</button>
+    <button id="submit-btn" class="btn" onclick="submit()" disabled>SUBMIT GUESS</button>
     </div>
     <button class="btn" onclick="restart()">RESTART</button>
-    <div id="message-el"></div>
+    <button class="btn" onclick="clearHistory()">CLEAR</button>
     <div id="previous">Previous Guesses:</div>
     <div id="rem">Remaining Guesses:</div>
 </body>
