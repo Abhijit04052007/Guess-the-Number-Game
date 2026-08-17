@@ -119,7 +119,7 @@ function lockAndStart(){
     
   } 
   else if (chosenDifficulty === "hard") {
-    max = 5;
+    max = 7;
     
   }
   totalAllowedAttempts = max;
